@@ -1,0 +1,13 @@
+<configuration>
+  <timestamp key="runTimestamp" datePattern="HH:mm:ss.SSS" />
+  <appender name="File" class="ch.qos.logback.core.FileAppender">
+  	<file>logs/logback-file-sync-${runTimestamp}.log</file>
+  	<append>false</append>
+    <encoder>
+      <pattern>%d %p [%logger] %m%n</pattern>
+    </encoder>
+  </appender>
+  <root level="info">
+    <appender-ref ref="File" />
+  </root>
+</configuration>

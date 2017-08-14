@@ -1,0 +1,16 @@
+<configuration>
+  <timestamp key="runTimestamp" datePattern="HH:mm:ss.SSS" />
+  <appender name="File" class="ch.qos.logback.core.FileAppender">
+  	<file>logs/logback-file-async-${runTimestamp}.log</file>
+  	<append>false</append>
+    <encoder>
+      <pattern>%d %p [%logger] %m%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="Async" class="ch.qos.logback.classic.AsyncAppender">
+  	<appender-ref ref="File" />
+  </appender>
+  <root level="info">
+    <appender-ref ref="Async" />
+  </root>
+</configuration>

@@ -1,0 +1,13 @@
+<configuration>
+  <appender name="Syslog" class="ch.qos.logback.classic.net.SyslogAppender">
+    <syslogHost>localhost</syslogHost>
+    <port>514</port>
+    <facility>LOCAL7</facility>
+  </appender>
+  <appender name="Async" class="ch.qos.logback.classic.AsyncAppender">
+  	<appender-ref ref="Syslog" />
+  </appender>
+  <root level="info">
+    <appender-ref ref="Async" />
+  </root>
+</configuration>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <File name="File" bufferedIO="true" fileName="logs/log4j2-file-sync-${date:HH:mm:ss.SSS}.log">
+      <PatternLayout pattern="%d %p %m%n" />
+    </File>
+  </Appenders>
+  <Loggers>
+    <Root level="info" includeLocation="false">
+      <AppenderRef ref="File" />
+    </Root>
+  </Loggers>
+</Configuration>

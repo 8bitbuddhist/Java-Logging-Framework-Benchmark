@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <Syslog name="Syslog" format="RFC5424" host="localhost" port="514" protocol="UDP"
+    	appName="benchmark-log4j2-udp" facility="LOCAL7" includeMDC="false" mdcId="mdc" newLine="true"/>
+    <Async name="Async">
+      <AppenderRef ref="Syslog" />
+    </Async>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="Async" />
+    </Root>
+  </Loggers>
+</Configuration>
