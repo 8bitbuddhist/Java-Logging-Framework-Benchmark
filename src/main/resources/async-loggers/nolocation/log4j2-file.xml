@@ -6,7 +6,7 @@
     </File>
   </Appenders>
   <Loggers>
-    <Root level="info" includeLocation="false">
+    <Root level="all" includeLocation="false">
       <AppenderRef ref="File" />
     </Root>
   </Loggers>

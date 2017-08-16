@@ -4,12 +4,12 @@
     <File name="File" bufferedIO="true" fileName="logs/log4j2-file-async-${date:HH:mm:ss.SSS}.log">
       <PatternLayout pattern="%d %p %m%n" />
     </File>
-    <Async name="Async" includeLocation="false">
+    <Async name="Async" includeLocation="false" bufferSize="1000000">
       <AppenderRef ref="File" />
     </Async>
   </Appenders>
   <Loggers>
-    <Root level="info">
+    <Root level="all">
       <AppenderRef ref="Async" />
     </Root>
   </Loggers>

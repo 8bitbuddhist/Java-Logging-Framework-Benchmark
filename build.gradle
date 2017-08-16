@@ -39,6 +39,8 @@ dependencies {
   	compile group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
 }
 
-if (System.getProperty("exec.args") != null) {
-	args System.getProperty("exec.args").split()
+run {
+	if (System.getProperty("exec.args") != null) {
+		args System.getProperty("exec.args").split()
+	}
 }

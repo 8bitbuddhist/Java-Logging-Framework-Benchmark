@@ -5,7 +5,7 @@
     	appName="benchmark-log4j2-tcp" facility="LOCAL0" includeMDC="false" mdcId="mdc" newLine="true"/>
   </Appenders>
   <Loggers>
-    <Root level="info" includeLocation="false">
+    <Root level="all" includeLocation="false">
       <AppenderRef ref="Syslog" />
     </Root>
   </Loggers>

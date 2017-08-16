@@ -4,7 +4,7 @@
     <port>514</port>
     <facility>LOCAL1</facility>
   </appender>
-  <root level="info">
+  <root level="all">
     <appender-ref ref="Syslog" />
   </root>
 </configuration>

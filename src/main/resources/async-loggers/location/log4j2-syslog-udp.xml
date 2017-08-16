@@ -5,7 +5,7 @@
     	appName="benchmark-log4j2-udp" facility="LOCAL1" includeMDC="false" mdcId="mdc" newLine="true"/>
   </Appenders>
   <Loggers>
-    <Root level="info" includeLocation="false">
+    <Root level="all" includeLocation="true">
       <AppenderRef ref="Syslog" />
     </Root>
   </Loggers>

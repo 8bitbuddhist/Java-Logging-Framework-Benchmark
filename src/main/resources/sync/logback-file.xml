@@ -7,7 +7,7 @@
       <pattern>%d %p [%logger] %m%n</pattern>
     </encoder>
   </appender>
-  <root level="info">
+  <root level="all">
     <appender-ref ref="File" />
   </root>
 </configuration>

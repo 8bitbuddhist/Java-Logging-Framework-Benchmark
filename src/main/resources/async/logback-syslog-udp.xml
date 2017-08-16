@@ -4,10 +4,10 @@
     <port>514</port>
     <facility>LOCAL7</facility>
   </appender>
-  <appender name="Async" class="ch.qos.logback.classic.AsyncAppender">
+  <appender name="Async" class="ch.qos.logback.classic.AsyncAppender" queueSize="1000000" discardingThreshold="0">
   	<appender-ref ref="Syslog" />
   </appender>
-  <root level="info">
+  <root level="all">
     <appender-ref ref="Async" />
   </root>
 </configuration>

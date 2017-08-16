@@ -2,11 +2,11 @@
 <Configuration>
   <Appenders>
     <File name="File" bufferedIO="true" fileName="logs/log4j2-file-sync-${date:HH:mm:ss.SSS}.log">
-      <PatternLayout pattern="%d %p [%c] %m%n" />
+      <PatternLayout pattern="%d %p %m%n" />
     </File>
   </Appenders>
   <Loggers>
-    <Root level="all">
+    <Root level="all" includeLocation="true">
       <AppenderRef ref="File" />
     </Root>
   </Loggers>

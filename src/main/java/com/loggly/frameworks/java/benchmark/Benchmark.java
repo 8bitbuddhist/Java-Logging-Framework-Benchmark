@@ -13,7 +13,7 @@ public class Benchmark {
 	 * Parameters are
 	 * 1. Number of iterations (+1 to warm up the JVM)
 	 * 2. Number of runs per iteration
-	 * 3. Logging framework (to use Log4j2 Async Logging, specify "log4j2-async")
+	 * 3. Logging framework (to use Log4j2 Async Logging, specify "log4j2-async" or "log4j2-async-location" to enable location info)
 	 * 4. Appender type
 	 * 5. (optional) Whether to use a synchronous or asynchronous appender
 	 * e.g. "10 100000 java.util.logging file sync"
@@ -44,7 +44,17 @@ public class Benchmark {
 		// Use async loggers (Log4j2 only)
 		if (framework.toLowerCase().contains("log4j2") && framework.toLowerCase().contains("async")) {
 			System.setProperty("Log4jContextSelector", "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
-			configFile += "/async-loggers";
+			
+			// Increase asynchronous logger buffer size to 1M messages
+			System.setProperty("AsyncLogger.RingBufferSize", "1048576");
+			
+			// Use a config file with location enabled?
+			if (framework.toLowerCase().contains("location")) {
+				configFile += "/async-loggers/location";
+			}
+			else {
+				configFile += "/async-loggers/nolocation";
+			}
 		}
 		else {
 			// Use traditional loggers with sync or async appenders

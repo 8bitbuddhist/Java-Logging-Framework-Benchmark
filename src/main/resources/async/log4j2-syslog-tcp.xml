@@ -3,12 +3,12 @@
   <Appenders>
     <Syslog name="Syslog" format="RFC5424" host="localhost" port="514" protocol="TCP"
     	appName="benchmark-log4j2-tcp" facility="LOCAL6" includeMDC="false" mdcId="mdc" newLine="true"/>
-    <Async name="Async">
+    <Async name="Async" bufferSize="1000000">
       <AppenderRef ref="Syslog" />
     </Async>
   </Appenders>
   <Loggers>
-    <Root level="info">
+    <Root level="all">
       <AppenderRef ref="Async" />
     </Root>
   </Loggers>
