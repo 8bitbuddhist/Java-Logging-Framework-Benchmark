@@ -15,7 +15,7 @@ Run the project using the following command:
 
 The arguments take the following format:
 
-* Iterations: The number of iterations (i.e. loops) to run over the course of the test (this does not include one additional iteration to warm up the JVM).
+* Iterations: The number of iterations (i.e. loops) to run over the course of the test (this does not include one additional iteration to warm up the JIT).
 * Events per iteration: The number of events to generate per iteration.
 * Framework: The logging framework to use. This can be `log4j2`, `logback`, or `java.util.logging` for the respective framework.
     * To use log4j2's asynchronous loggers, append `-async` after log4j2. If you also want to include location info, append `-async-location`.
