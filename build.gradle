@@ -7,7 +7,7 @@
  */
  
 // Declare dependency versions
-ext.log4j2Version = '2.9.1'
+ext.log4j2Version = '2.10.0'
 ext.logbackVersion = '1.2.3'
 ext.disruptorVersion = '3.3.6'
 ext.julToSlf4jVersion = '1.7.25'
