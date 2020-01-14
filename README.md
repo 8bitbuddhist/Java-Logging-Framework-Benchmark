@@ -1,9 +1,11 @@
 # Java Logging Framework Benchmark
-An application for performance testing different Java logging frameworks. By default, it tests the following frameworks:
+An application for performance testing different Java logging frameworks. It tests the following frameworks:
 
 * Log4j 2
 * Logback
 * java.util.logging
+
+![](https://github.com/8bitbuddhist/Java-Logging-Framework-Benchmark/workflows/Java%20CI/badge.svg)
 
 ## Building the Project
 This project uses [Gradle](https://gradle.org/). To build the project, navigate to the project folder and run `./gradlew build`.
