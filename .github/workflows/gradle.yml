@@ -12,7 +12,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
-        java-version: 14
+        java-version: 15
     - name: Gradle wrapper validation
       uses: gradle/wrapper-validation-action@v1
     - name: Build with Gradle
