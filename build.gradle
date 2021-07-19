@@ -30,7 +30,7 @@ dependencies {
     compile group: 'com.lmax', name: 'disruptor', version: '3.4.2'
     
     // Logback
-    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.4'
 }
 
 run {
