@@ -27,7 +27,7 @@ dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.20.0'
     
     // For Log4j2 Async Logging
-    compile group: 'com.lmax', name: 'disruptor', version: '3.4.4'
+    compile group: 'com.lmax', name: 'disruptor', version: '4.0.0'
     
     // Logback
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.7'
