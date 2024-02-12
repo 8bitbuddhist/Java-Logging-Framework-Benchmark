@@ -16,6 +16,6 @@ jobs:
        java-version: '15'
        cache: 'gradle'
     - name: Gradle wrapper validation
-      uses: gradle/wrapper-validation-action@v1.0.6
+      uses: gradle/wrapper-validation-action@v2.1.1
     - name: Build with Gradle
       run: ./gradlew build
