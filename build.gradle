@@ -24,7 +24,7 @@ dependencies {
     // Project-specific dependencies    
     // Log4j 2
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.20.0'
-    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.20.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.23.0'
     
     // For Log4j2 Async Logging
     compile group: 'com.lmax', name: 'disruptor', version: '3.4.4'
